@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+    font-family: Lato, serif;
+    font-size: 43px;
+    padding-bottom: 0px;
+}
+h2 {
+    padding-left: 15px;
+    font-family: Lato;
+}
+#groupMembersNames {
+    padding-top: 0px;
+    text-align: center;
+    font-family: Lato
+}
+h3 {
+    font-family: Lato;
+    padding-left: 25px;
+}
+
+h4 {
+    font-family: Lato;
+    padding-left: 18px;
+}
+
+p {
+    font-family: Lato, serif;
+    padding-left: 35px;
+}
+
+#photoSphere_Img {
+    width: 800px;
+    padding-left: 70px;
+}
+
+.iphoneImgs {
+    padding-left: 35px;
+    height: 30%;
+    width: 30%;
+}
+
+.lucasPhotos {
+    padding-left: 35px;
+    height: 50%;
+    width: 50%;
+}
+
+.pipeLineImg {
+    padding-left: 35px;
+}
+
+
