@@ -68,7 +68,7 @@
             seamless stereo.</p>
 
         <h2>Final Product: May 5 2016</h2>
-        <p>Our final product is a unity application that renders a stereoscopic video tour of select parts of the
+        <p>Our final product is a unity application that renders a stereoscopic video tour of parts of the
             University of Maryland campus.
         </p>
         <h3>Content Pipeline</h3>
@@ -100,8 +100,8 @@
         <p>Using only two cameras makes it difficult to achieve stereoscopic video for the full 360 degrees sphere.
             We decided instead to leave the sides of the sphere as mono and keep front and back stereo. In order to
             achieve stereo in the front and back, the left and right camera footage is shown accordingly to the left and right eye when the user is facing forward
-            or looking at the front panel. When the user turns around and , or faces the back panel the the footage captured with right camera
-            is now shown in the left eye and the footage captured with the left camera is now shown in the right eye.In
+            or looking at the front panel. When the user turns around and or faces the back panel the footage captured with right camera
+            is now shown in the left eye and the footage captured with the left camera is now shown in the right eye. In
             order to implement this functionality we inserted 3 panels in the front and back of the viewer. The panels are setup to detect the current field of view. </p>
         <img class="lucasPhotos" src="images/panels.png" alt="Two Rioch Theta Cameras">
         <p>The gaps between the front field of view and back field of view make up the side views and are mono. In
@@ -111,6 +111,5 @@
         <img class="lucasPhotos" src="images/raycast.png" alt="Two Rioch Theta Cameras">
         <br/>
         <p>That’s it! Then we just used a script that updated the frame in each sphere at 30 fps to get video like sensation. </p>
-
     </body>
 </html>
