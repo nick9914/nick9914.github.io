@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26108c05-1188-427d-9bef-60822bcbbac3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/virtualTour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/IMG_4624.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/IMG_4626.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/backwardsphotosphere.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/frame0045.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/manoj_VR_tour.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/panels.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/pipeline.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/raycast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/theta_cameras.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/theta_cameras_2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/images/unity_photosphere.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/virtualTour.html" afterPath="$PROJECT_DIR$/projects/index.html" />
     </list>
     <ignored path="PersonalWebSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +47,7 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projects/index.html">
+        <entry file="file://$PROJECT_DIR$/vr-project/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="1.007752">
               <caret line="112" column="130" selection-start-line="112" selection-start-column="130" selection-end-line="112" selection-end-column="130" />
@@ -162,7 +172,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
+              <option name="myItemId" value="vr-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,7 +303,13 @@
       <option name="project" value="LOCAL" />
       <updated>1476762113060</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="rename virtual tour page">
+      <created>1476762611321</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1476762611321</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -359,7 +375,8 @@
     <MESSAGE value="Title spacing tweak&#10;" />
     <MESSAGE value="Update viewport meta tag&#10;" />
     <MESSAGE value="added vr project webpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added vr project webpage" />
+    <MESSAGE value="rename virtual tour page" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename virtual tour page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -536,7 +553,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/index.html">
+    <entry file="file://$PROJECT_DIR$/vr-project/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.007752">
           <caret line="112" column="130" selection-start-line="112" selection-start-column="130" selection-end-line="112" selection-end-column="130" />
