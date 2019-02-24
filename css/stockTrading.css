@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+    font-family: Lato, serif;
+    font-size: 43px;
+    padding-bottom: 0;
+}
+
+h2 {
+    padding-left: 15px;
+    font-family: Lato, serif;
+}
+
+#groupMembersNames {
+    padding-top: 0px;
+    text-align: center;
+    font-family: Lato, serif
+}
+
+h3 {
+    font-family: Lato, serif;
+    padding-left: 25px;
+}
+
+h4 {
+    font-family: Lato, serif;
+    padding-left: 18px;
+}
+
+p {
+    font-family: Lato, serif;
+    padding-left: 35px;
+}
+
+
