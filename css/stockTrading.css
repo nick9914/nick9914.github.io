@@ -1,13 +1,37 @@
+#bodyParent {
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+
+    line-height: 130%;
+    text-align: left;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.275), rgba(0, 0, 0, 0.275)),
+    url('../assets/images/new_york_vessal.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /*background-position: 50% 24%;*/
+    background-position: 50% 28%;
+    background-size: 1741px 1391px;
+
+}
+
 h1 {
     text-align: center;
     font-family: Lato, serif;
     font-size: 43px;
     padding-bottom: 0;
+    color: white;
 }
 
 h2 {
-    padding-left: 15px;
+    padding-left: 90px;
     font-family: Lato, serif;
+    color: white;
 }
 
 #groupMembersNames {
@@ -17,18 +41,27 @@ h2 {
 }
 
 h3 {
+    padding-left: 90px;
     font-family: Lato, serif;
-    padding-left: 25px;
+    color: white;
 }
 
 h4 {
     font-family: Lato, serif;
     padding-left: 18px;
+    color: white;
 }
 
 p {
     font-family: Lato, serif;
-    padding-left: 35px;
+    padding-left: 110px;
+    color: white;
+}
+
+img {
+    padding-left: 110px;
+    max-width: 22%;
+    max-height: 22%;
 }
 
 
