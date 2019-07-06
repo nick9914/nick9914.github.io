@@ -27,6 +27,8 @@
 }
 
 #socialLinksContainer ul li a {
+    display: inline-block;
+    position: relative;
     text-decoration: none;
     padding: .2em 1em;
     transition: all 500ms ease;
