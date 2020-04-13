@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decentralizing the Order Book</title>
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="../css/decentralizedOrderBook.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:Light300">
+</head>
+<body>
+<br/>
+<h1 id="title">Decentralizing the Order Book</h1>
+<p id="subtitle">
+    Nick Valdez
+</p>
+
+<h2>Intro</h2>
+<p id="bodyText">
+    With the emergence of new technologies inefficiencies in current systems or protocols become apparent. The
+    hypothesis
+    in the below project is that block chain technology can create a new order book protocol that eliminates the
+    most exploitable inefficiency: Front running by order book owner.
+</p>
+
+<h2> Inefficiencies in Centralized Order Books </h2>
+<p id="bodyText">
+    In addition to the well known advantages gained from using a decentralized system vs a centralized system, with a
+    decentralized order book I believe the well known and exploitable inefficiency of front running can be solved.
+
+    The below exert from a book I recently read, "The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution" by Gregory Zuckerman,
+    is one example of how front running is used to cheat and gain an unfair advantage over the trader and the rest of the market
+
+</p>
+<p id="bodyQuote">
+    Whenever Medallion traded Canadian dollars, the fund seemed to lose
+    money. Almost every trade was a dud. It didn’t seem to make sense—the model said Medallion should be racking up
+    money, but they were losing, over and over, every day. One afternoon, Berlekamp shared his frustrations with Simons,
+    who called a trader on the floor of the Chicago Board of Trade to get his take on their problems. “Don’t you know,
+    Jim?” the trader told him, with a chuckle. “Those guys are crooks.” Only three traders on the exchange focused on
+    Canadian dollar futures, and they worked hand-in-hand to take advantage of customers naive enough to transact with
+    them.
+</p>
+<p id="bodyQuote">
+    Zuckerman, Gregory. The Man Who Solved the Market (p. 113). Penguin Publishing Group. Kindle Edition.
+</p>
+
+<p id="bodyText">
+    When Simons’s team placed a buy order, the brokers shared the information, and the traders immediately
+    purchased Canadian dollar contracts for themselves, pushing the price up just a tad, before selling to Simons and
+    pocketing the difference as profit. They’d do the opposite if Medallion was selling; the small differences in price
+    were enough to turn the Canadian dollar trades into losers. It was one of Wall Street’s oldest tricks, but Berlekamp
+    and his fellow academics were oblivious to the practice.
+</p>
+
+<p id="bodyText">
+    Similar to BTC, the theory behind decentralized order books is cannot completely gurantee an efficient
+    orderbook yet. However, the simulation explores if it could work in practice as well as BTC works in practice .
+</p>
+
+<p id="bodyText">
+    the block chain can be used as an independent module for providing new functionalities—a template that can be
+    emulated for the decentralization of many different services.
+</p>
+
+<h2> Incentive Engineering </h2>
+<p id="bodyText">take note that the mechanism through which Bitcoin achieves decentralization is not purely technical,
+    but it’s a combination of technical methods and clever incentive engineering.
+
+<p id="bodyText">
+    Game theory tells us to not assume that every node is honest, but that instead to assume that every node will want
+    to maximize profit or act accoring to their incentive.
+</p>
+<p id="bodyText">
+    We can't send cash to honest nodes because we do not know their identitiess. but we can give them bitcoin because it
+    is a digital ccy
+</p>
+<p id="bodyText">
+    Each node picks a (randomized) strategy to maximize its payoff, taking into account other nodes’ potential
+    strategies. If the protocol and incentives are designed well, then most nodes will follow the rules most of the
+    time. “Honest” behavior is just one strategy of many, and we attach no particular moral salience to it.
+
+    In the game theoretic view, the big question is whether the default miner behavior is a “Nash equilibrium,” that is,
+    whether it represents a stable situation in which no miner can realize a higher payoff by deviating from honest
+    behavior. This question is still contentious and an active area of research.
+</p>
+<p id="bodyText">
+    Traditionally: mining reward = block reward + tx fees
+</p>
+<p id="bodyText">
+    analyzing whether it makes sense to mine is a complicated game theory question
+</p>
+<h2> Bootstrapping​? </h2>
+
+
+<video id="bodyVideo" width="80%" height="100%" controls>
+    <source src="assets/videos/distributed_order_book_II.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>

@@ -2,25 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Searching for Alpha</title>
+    <title>Alpha Game</title>
     <style type="text/css"></style>
     <link rel="stylesheet" href="../css/stockTrading.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:Light300">
 </head>
 <body>
 <br/>
-<h1>Searching for Alpha</h1>
-<h2 id="groupMembersNames">
+<h1 id="title">Alpha Game</h1>
+<p id="subtitle">
     Nick Valdez
-</h2>
-
-<h2>Equity Trading using Rules and Technical Indicators</h2>
-<p>
-I used a few technical indicators and some rules to make buy and sell decisions based on the techinical indicators.
-    Results of the algorithm performance are shown below.
+</p>
+<h2>Portfolio Generation</h2>
+<p id="bodyText">
+    I decided on my portfolio of equity stocks by generating all possible subsets portfolios of s&p 500 member companies
+    and back-testing my trading strategy on each subset to see which stocks performed best with my strategy.
+</p>
+<p id="bodyText">
+    Below is a table of the top 5 portfolios that performed best with my strategy according to back-testing results.
+</p>
+<p id="bodyText">
+    The chart is dynamic and gets updated daily based on back-testing results that get re-computed every two hours in
+    order
+    to quickly adapt to any significant or deviant market conditions.
 </p>
 
-<img id="price_data_plot" src="images/rule_based_trading_2009_2012.png" alt="rule_based_trading_2009_to_2012" align="center">
-<h2>Equity Trading using Machine Learning</h2>
+<h2>Rule Based Trading Using Technical Indicators</h2>
+<p id="bodyText">
+    I used a few technical indicators and some rules to make buy and sell decisions based on the techinical indicators.
+    Results of the algorithm performance are shown below.
+</p>
+<p id="bodyText">
+    "According to L. Jay Tenenbaum, his successor on the risk arbitrage desk, the trick in those days required less of a
+    reliance on fancy models or sophisticated financial instruments than on instinct and good manners."
+</p>
+
+<p id="bodyText">
+    A model dependent on running simple linear regressions through data points generally does a poor job predicting
+    future prices in complex, volatile markets marked by freak snowstorms, panic selling, and turbulent geopolitical
+    events, all of which can play havoc with commodity and other prices.
+
+    Zuckerman, Gregory. The Man Who Solved the Market (p. 83). Penguin Publishing Group. Kindle Edition.
+</p>
+
+<img id="price_data_plot" src="images/rule_based_trading_2009_2012.png" alt="rule_based_trading_2009_to_2012"
+     align="center">
+<h2>Machine Learning and Data Based Trading </h2>
 </body>
 </html>
