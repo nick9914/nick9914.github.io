@@ -16,85 +16,148 @@
 
 <h2>Intro</h2>
 <p id="bodyText">
-    With the emergence of new technologies inefficiencies in current systems or protocols become apparent. The
-    hypothesis
-    in the below project is that block chain technology can create a new order book protocol that eliminates the
-    most exploitable inefficiency: Front running by order book owner.
+    With the emergence of bitcoin, block chain, or crypto technologies (whatever you want to refer them to as), a
+    new paradigm and ideology of distributed protocols and systems has also emerged. This side project explores in an
+    informal way (it’s a side project after all) how stock exchange and the order book can be re-designed to eliminate
+    the all too common problem of front running, which in the past has been exploited by stock exchanges,
+    big wall street banks, and high frequency trades who have access to super-fast computers that others do not.
 </p>
 
-<h2> Inefficiencies in Centralized Order Books </h2>
+<h2>Distributed Order Book Simulation </h2>
+<video id="bodyVideo" width="80%" height="100%" controls>
+    <source src="assets/videos/distributed_order_book_V.mp4" type="video/mp4">
+</video>
+
 <p id="bodyText">
-    In addition to the well known advantages gained from using a decentralized system vs a centralized system, with a
-    decentralized order book I believe the well known and exploitable inefficiency of front running can be solved.
+    Participants are blue nodes, Miners are red nodes. Bid / ask trades are represented as small red dots.
+    Block propagation between miner nodes is represented by white dots.
+</p>
 
-    The below exert from a book I recently read, "The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution" by Gregory Zuckerman,
-    is one example of how front running is used to cheat and gain an unfair advantage over the trader and the rest of the market
+<h2>Inefficiencies in Centralized Order Books</h2>
+<p id="bodyText">
+    The biggest inefficiency in a centralized order book is by far front running. The front running problem is
+    particularly well highlighted in Michael Lewis’ Book “Flash Boys”. The centralized architecture of stock exchanges
+    and order books lets some people exploit and rig the stock market. There are few different types of front running,
+    but a good and real example that I recently read about should give you an idea of how the stock exchange can front
+    run you.
+</p>
 
+<p id="bodyText">
+    From "The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution" by Gregory Zuckerman
+</p>
+
+<p id="bodyQuote">
+    “Whenever Medallion  traded Canadian dollars, the fund seemed to lose money. Almost every trade was a dud.
+    It didn’t seem to make sense—the model said Medallion should be racking up money, but they were losing, over and
+    over, every day. One afternoon, Berlekamp shared his frustrations with Simons, who called a trader on the floor
+    of the Chicago Board of Trade to get his take on their problems. “Don’t you know, Jim?” the trader told him, with a
+    chuckle. “Those guys are crooks.” Only three traders on the exchange focused on Canadian dollar futures, and they
+    worked hand-in-hand to take advantage of customers naive enough to transact with them.”
 </p>
 <p id="bodyQuote">
-    Whenever Medallion traded Canadian dollars, the fund seemed to lose
-    money. Almost every trade was a dud. It didn’t seem to make sense—the model said Medallion should be racking up
-    money, but they were losing, over and over, every day. One afternoon, Berlekamp shared his frustrations with Simons,
-    who called a trader on the floor of the Chicago Board of Trade to get his take on their problems. “Don’t you know,
-    Jim?” the trader told him, with a chuckle. “Those guys are crooks.” Only three traders on the exchange focused on
-    Canadian dollar futures, and they worked hand-in-hand to take advantage of customers naive enough to transact with
-    them.
+    “When Simons’s team placed a buy order, the brokers shared the information, and the traders immediately purchased
+    Canadian dollar contracts for themselves, pushing the price up just a tad, before selling to Simons and pocketing
+    the difference as profit. They’d do the opposite if Medallion was selling; the small differences in price were
+    enough to turn the Canadian dollar trades into losers. It was one of Wall Street’s oldest tricks, but Berlekamp and
+    his fellow academics were oblivious to the practice.”
 </p>
+
 <p id="bodyQuote">
     Zuckerman, Gregory. The Man Who Solved the Market (p. 113). Penguin Publishing Group. Kindle Edition.
 </p>
 
 <p id="bodyText">
-    When Simons’s team placed a buy order, the brokers shared the information, and the traders immediately
-    purchased Canadian dollar contracts for themselves, pushing the price up just a tad, before selling to Simons and
-    pocketing the difference as profit. They’d do the opposite if Medallion was selling; the small differences in price
-    were enough to turn the Canadian dollar trades into losers. It was one of Wall Street’s oldest tricks, but Berlekamp
-    and his fellow academics were oblivious to the practice.
+    There are other types of front running that you can look up, but overall key takeaway here is that front running is
+    possible because trading occurs through a centralized entity. The protocol forces you to place a lot of trust in
+    this central entity.
+</p>
+
+<h2>Bitcoin + Incentive Engineering = Distributed Order Book</h2>
+
+<p id="bodyText">
+    The question we are trying to answer here is how to match buyers’ and sellers’ trades and have them agree on a price.
+    The protocol, shown in the simulation video above, is described below.
+</p>
+<p id="bodyPoint">
+   1. Participants (blue nodes) broadcast their buy or sell trades to all miners (red nodes) in the P2P network.
+</p>
+<p id="bodyPoint">
+    2. Miners validate bid/ask orders from their mem pool in order to prepare a block for the block chain.
+    Miners validate by making sure the bidder has enough funds if it’s a bid order, or the seller actually possesses
+    the financial instruments it is selling if it is an ask order.
+</p>
+<p id="bodyPoint">
+    3. Miners match bid and ask orders that pass the step validation. This where incentive engineering kicks in. The
+    miner’s fee is the spread of the orders they match. Thus, the miner will be incentivized to match the highest bid
+    with the lowest sell price.
+</p>
+<p id="bodyPoint">
+    4. Proof of work  or Proof of state and block propagation by the miner.
 </p>
 
 <p id="bodyText">
-    Similar to BTC, the theory behind decentralized order books is cannot completely gurantee an efficient
-    orderbook yet. However, the simulation explores if it could work in practice as well as BTC works in practice .
+    Let’s take a closer look at why a miner is not incentivized to front run anymore:
+</p>
+
+<p id="bodyPoint">
+    1. Assume four orders arrive. 100 bid, 100 ask, 99 bid, 99 ask, all with the same volume.
+</p>
+
+<p id="bodyPoint">
+    2. The miner would be incentivized to match the 100 bid with 99 ask, keeping the 1$ spread. Net 1$ gain
+</p>
+
+<p id="bodyPoint">
+    3. If the miner decides to front run by:
+</p>
+
+<p id="bodyPointSub">
+    A: Ignoring the 99 ask and submitting a 99.5 ask which improves their price by $0.5 but decreases the gains from
+    the spread by an equivalent amount, netting only $0.5.
+</p>
+
+<p id="bodyPointSub">
+    B: Ignoring the $99 ask and filling the order themselves at the best ask price, in this case $99, then the miner
+    would gain $1 on the surplus.
+</p>
+
+<p id="bodyPointSub">
+    C: Ignoring the $99 bid and submitting a worse bid (lower than $99),then the miner would not gain anything because
+    they are selling undervalue.
+</p>
+
+<p id="bodyPoint">
+    As you can see, if the protocol allows miners to keep the spread between matched bid and ask orders (the surplus),
+    there is no incentive to front run by:
+</p>
+
+<p id="bodyPointSub">
+    A: Price improvements through ignoring or dropping orders.
+</p>
+
+<p id="bodyPointSub">
+    B: Ability to prioritize their trades over others.
+</p>
+
+<h2>Other Notes about a decentralized protocol</h2>
+<p id="bodyText">
+     Time precedence order matching in this system is not entirely possible due to the fact that trade orders are
+    broadcasted in the P2P network and there can be delays. Thus, this system operates on price precedence. Orders
+    with the best price will get matched first (best bid = highest bid price, best ask = lowest ask price).
 </p>
 
 <p id="bodyText">
-    the block chain can be used as an independent module for providing new functionalities—a template that can be
-    emulated for the decentralization of many different services.
+    This system also has similar if not the same assumptions the bitcoin network has on miners.
+    ( trust that the majority of miner nodes behave honestly due to the incentives mentioned in the previous section ).
 </p>
 
-<h2> Incentive Engineering </h2>
-<p id="bodyText">take note that the mechanism through which Bitcoin achieves decentralization is not purely technical,
-    but it’s a combination of technical methods and clever incentive engineering.
+<p id="bodyText">
+    Due to the nature of the distributed system, order matching does not occur like it does in a continuous market.
+    Instead, it acts like a call market (“In a call market, orders are placed over an interval of time and then executed
+    as a batch”). Think of this as the participants broadcasting orders to miners, miners batching together orders and
+    then executing a proof of work or proof of stake computation.
+</p>
 
-<p id="bodyText">
-    Game theory tells us to not assume that every node is honest, but that instead to assume that every node will want
-    to maximize profit or act accoring to their incentive.
-</p>
-<p id="bodyText">
-    We can't send cash to honest nodes because we do not know their identitiess. but we can give them bitcoin because it
-    is a digital ccy
-</p>
-<p id="bodyText">
-    Each node picks a (randomized) strategy to maximize its payoff, taking into account other nodes’ potential
-    strategies. If the protocol and incentives are designed well, then most nodes will follow the rules most of the
-    time. “Honest” behavior is just one strategy of many, and we attach no particular moral salience to it.
-
-    In the game theoretic view, the big question is whether the default miner behavior is a “Nash equilibrium,” that is,
-    whether it represents a stable situation in which no miner can realize a higher payoff by deviating from honest
-    behavior. This question is still contentious and an active area of research.
-</p>
-<p id="bodyText">
-    Traditionally: mining reward = block reward + tx fees
-</p>
-<p id="bodyText">
-    analyzing whether it makes sense to mine is a complicated game theory question
-</p>
-<h2> Bootstrapping​? </h2>
-
-
-<video id="bodyVideo" width="80%" height="100%" controls>
-    <source src="assets/videos/distributed_order_book_II.mp4" type="video/mp4">
-</video>
 
 </body>
 </html>

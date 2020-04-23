@@ -70,6 +70,20 @@ h4 {
     color: white;
 }
 
+#bodyPoint {
+    font-family: Lato, serif;
+    padding-left: 130px;
+    padding-right: 130px;
+    color: white;
+}
+
+#bodyPointSub {
+    font-family: Lato, serif;
+    padding-left: 150px;
+    padding-right: 150px;
+    color: white;
+}
+
 #bodyVideo {
     display: inline-block;
     border:1px solid red;
