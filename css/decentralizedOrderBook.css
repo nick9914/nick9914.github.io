@@ -42,7 +42,7 @@ body {
 h2 {
     padding-left: 90px;
     font-family: Lato, serif;
-    color: white;
+    color: black;
 }
 
 #groupMembersNames {
@@ -54,34 +54,34 @@ h2 {
 h3 {
     padding-left: 90px;
     font-family: Lato, serif;
-    color: white;
+    color: black;
 }
 
 h4 {
     font-family: Lato, serif;
     padding-left: 18px;
-    color: white;
+    color: black;
 }
 
 #bodyText {
     font-family: Lato, serif;
     padding-left: 110px;
     padding-right: 110px;
-    color: white;
+    color: black;
 }
 
 #bodyPoint {
     font-family: Lato, serif;
     padding-left: 130px;
     padding-right: 130px;
-    color: white;
+    color: black;
 }
 
 #bodyPointSub {
     font-family: Lato, serif;
     padding-left: 150px;
     padding-right: 150px;
-    color: white;
+    color: black;
 }
 
 #bodyVideo {
@@ -98,7 +98,7 @@ h4 {
     font-family: Lato, serif;
     padding-left: 110px;
     padding-right: 110px;
-    color: white;
+    color: black;
     font-style: italic;
 }
 
